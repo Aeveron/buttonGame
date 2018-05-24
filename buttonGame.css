@@ -17,3 +17,9 @@
     font-size: 50px;
     background-color: lightgrey;
 }
+
+#secDiv{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+}

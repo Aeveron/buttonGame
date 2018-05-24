@@ -30,7 +30,7 @@ function colorClick(clicked) {
     if (btnViolet == clicked) {
         btnViolet.style.backgroundColor = 'violet';
     }
-    
+     
 }
 
 function startGame(clicky) {
@@ -45,3 +45,13 @@ function startGame(clicky) {
     }
 
 }
+
+var seconds = 0;
+var cancel = setInterval(counter, 1000);
+
+function counter() {
+    seconds += 1;
+    secDiv.innerText = "You have been here for " + seconds + " seconds.";
+}
+
+
