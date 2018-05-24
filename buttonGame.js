@@ -12,6 +12,24 @@ function colorClick(clicked) {
     if (btnRed == clicked) {
         btnRed.style.backgroundColor = 'red';       
     }
+    if (btnOrange == clicked) {
+        btnOrange.style.backgroundColor = 'orange';
+    }
+    if (btnYellow == clicked) {
+        btnYellow.style.backgroundColor = 'yellow';
+    }
+    if (btnGreen == clicked) {
+        btnGreen.style.backgroundColor = 'green';
+    }
+    if (btnBlue == clicked) {
+        btnBlue.style.backgroundColor = 'blue';
+    }
+    if (btnIndigo == clicked) {
+        btnIndigo.style.backgroundColor = 'indigo';
+    }
+    if (btnViolet == clicked) {
+        btnViolet.style.backgroundColor = 'violet';
+    }
     
 }
 
