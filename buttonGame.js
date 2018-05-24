@@ -6,6 +6,8 @@ var btnBlue = document.getElementById('btnBlue');
 var btnIndigo = document.getElementById('btnIndigo');
 var btnViolet = document.getElementById('btnViolet');
 
-function colorClick() {
-    
+function colorClick(clicked) {
+    if (btnRed == clicked) {
+        btnRed.style.color = 'red';
+    }
 }
