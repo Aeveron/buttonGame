@@ -1,0 +1,10 @@
+1. når du trykker start game starter tiden veldig langsomt også 
+blir en random farge lyst opp etterhvert klar til og trykkes på.
+1a. få til at når noe blir trykket på så øker hastigheten og det blir vanskligere.
+
+2. når en farge blir trykket på så blir alt tilbake til standard farge
+men tiden går fortsatt raskere.
+
+3. bruker du for lang tid på og trykke på en farge taper du med en "alert".
+
+4. går det så fort at du har lyst opp alt skal det stå en "alert" om at du har vunnet.
