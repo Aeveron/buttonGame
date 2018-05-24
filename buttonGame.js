@@ -43,7 +43,8 @@ function startGame(clicky) {
         btnIndigo.style.backgroundColor = 'lightgrey';
         btnViolet.style.backgroundColor = 'lightgrey';
     }
-
+    secDiv.innerText = '';
+    seconds = 0;
 }
 
 var seconds = 0;
