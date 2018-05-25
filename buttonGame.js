@@ -8,20 +8,30 @@ var btnViolet = document.getElementById('btnViolet');
 var secDiv = document.getElementById('secDiv');
 var testBtn = document.getElementById('testBtn');
 
-function colorClick(clicked) {
-    
-}
-
-function randomColor(colorSwap) {
+randomColor();
+function randomColor() {
     var buttons = document.getElementsByClassName('btnC');
     console.log(buttons);
     var randomBtn = Math.floor(Math.random() * buttons.length);
     console.log(randomBtn);
+    var selectedBtn = buttons[randomBtn];
+    var selectedBtnClassList = selectedBtn.classList;
+    selectedBtnClassList.add("cake");
+    //btnRed.style.backgroundColor = 'red';
+    //btnOrange.style.backgroundColor = 'orange';
+    //btnYellow.style.backgroundColor = 'yellow';
+    //btnGreen.style.backgroundColor = 'green';
+    //btnBlue.style.backgroundColor = 'blue';
+    //btnIndigo.style.backgroundColor = 'indigo';
+    //btnViolet.style.backgroundColor = 'violet';
+}
 
-    if (testBtn == colorSwap) {
-        btnC.innerText = 'hey';
+function turnOff(selected) {
+    var selectedBtnClassList = selected.classList;  
+    if (selectedBtnClassList.contains("cake")) {
+        selectedBtnClassList.remove("cake");
+        randomColor();
     }
-
 }
 
 function startGame(clicky) {
@@ -33,6 +43,7 @@ function startGame(clicky) {
         btnBlue.style.backgroundColor = 'lightgrey';
         btnIndigo.style.backgroundColor = 'lightgrey';
         btnViolet.style.backgroundColor = 'lightgrey';
+        randomColor();
     }
     secDiv.innerText = '';
     seconds = 0;
