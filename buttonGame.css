@@ -1,4 +1,4 @@
-﻿#btnRed, #btnOrange, #btnYellow, #btnGreen, #btnBlue, #btnIndigo, #btnViolet{
+﻿#btnRed, #btnOrange, #btnYellow, #btnGreen, #btnBlue, #btnIndigo, #btnViolet {
     height: 100px;
     width: 10%;
     position: relative;
@@ -6,6 +6,10 @@
     left: 10%;
     font-size: 25px;
     background-color: lightgrey;
+}
+
+#btnRed:hover, #btnOrange:hover, #btnYellow:hover, #btnGreen:hover, #btnBlue:hover, #btnIndigo:hover, #btnViolet:hover {
+    border: 2px solid black;
 }
 
 #gameStart {
@@ -18,13 +22,13 @@
     background-color: lightgrey;
 }
 
-#secDiv{
+#secDiv {
     position: absolute;
     top: 60%;
     left: 10%;
 }
 
-button.cake{
+button.cake {
     background-color: lime;
     height: 500px;
     width: 500px;

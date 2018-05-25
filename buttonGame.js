@@ -16,7 +16,7 @@ function randomColor() {
     console.log(randomBtn);
     var selectedBtn = buttons[randomBtn];
     var selectedBtnClassList = selectedBtn.classList;
-    selectedBtnClassList.add("cake");
+    selectedBtnClassList.add('cake');
     //btnRed.style.backgroundColor = 'red';
     //btnOrange.style.backgroundColor = 'orange';
     //btnYellow.style.backgroundColor = 'yellow';
@@ -28,8 +28,8 @@ function randomColor() {
 
 function turnOff(selected) {
     var selectedBtnClassList = selected.classList;  
-    if (selectedBtnClassList.contains("cake")) {
-        selectedBtnClassList.remove("cake");
+    if (selectedBtnClassList.contains('cake')) {
+        selectedBtnClassList.remove('cake');
         randomColor();
     }
 }
