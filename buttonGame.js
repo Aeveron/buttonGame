@@ -6,31 +6,22 @@ var btnBlue = document.getElementById('btnBlue');
 var btnIndigo = document.getElementById('btnIndigo');
 var btnViolet = document.getElementById('btnViolet');
 var secDiv = document.getElementById('secDiv');
-
+var testBtn = document.getElementById('testBtn');
 
 function colorClick(clicked) {
-    if (btnRed == clicked) {
-        btnRed.style.backgroundColor = 'red';       
+    
+}
+
+function randomColor(colorSwap) {
+    var buttons = document.getElementsByClassName('btnC');
+    console.log(buttons);
+    var randomBtn = Math.floor(Math.random() * buttons.length);
+    console.log(randomBtn);
+
+    if (testBtn == colorSwap) {
+        btnC.innerText = 'hey';
     }
-    if (btnOrange == clicked) {
-        btnOrange.style.backgroundColor = 'orange';
-    }
-    if (btnYellow == clicked) {
-        btnYellow.style.backgroundColor = 'yellow';
-    }
-    if (btnGreen == clicked) {
-        btnGreen.style.backgroundColor = 'green';
-    }
-    if (btnBlue == clicked) {
-        btnBlue.style.backgroundColor = 'blue';
-    }
-    if (btnIndigo == clicked) {
-        btnIndigo.style.backgroundColor = 'indigo';
-    }
-    if (btnViolet == clicked) {
-        btnViolet.style.backgroundColor = 'violet';
-    }
-     
+
 }
 
 function startGame(clicky) {
