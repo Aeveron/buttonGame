@@ -17,6 +17,7 @@ function randomColor() {
     var selectedBtn = buttons[randomBtn];
     var selectedBtnClassList = selectedBtn.classList;
     selectedBtnClassList.add('cake');
+    console.log(selectedBtn);
     //btnRed.style.backgroundColor = 'red';
     //btnOrange.style.backgroundColor = 'orange';
     //btnYellow.style.backgroundColor = 'yellow';
@@ -35,6 +36,7 @@ function turnOff(selected) {
 }
 
 function startGame(clicky) {
+    var buttonsTwo = document.getElementsByClassName('btnC');
     if (clicky == clicky) {
         btnRed.style.backgroundColor = 'lightgrey';
         btnOrange.style.backgroundColor = 'lightgrey';
@@ -43,8 +45,9 @@ function startGame(clicky) {
         btnBlue.style.backgroundColor = 'lightgrey';
         btnIndigo.style.backgroundColor = 'lightgrey';
         btnViolet.style.backgroundColor = 'lightgrey';
-        randomColor();
+        buttonsTwo.classList.remove('cake');   
     }
+    randomColor();
     secDiv.innerText = '';
     seconds = 0;
 }

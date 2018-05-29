@@ -8,7 +8,7 @@
     background-color: lightgrey;
 }
 
-#btnRed:hover, #btnOrange:hover, #btnYellow:hover, #btnGreen:hover, #btnBlue:hover, #btnIndigo:hover, #btnViolet:hover {
+button:hover{
     border: 2px solid black;
 }
 
@@ -30,6 +30,5 @@
 
 button.cake {
     background-color: lime;
-    height: 500px;
-    width: 500px;
+    color: aqua;
 }
