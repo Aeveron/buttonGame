@@ -7,36 +7,36 @@ var btnIndigo = document.getElementById('btnIndigo');
 var btnViolet = document.getElementById('btnViolet');
 var secDiv = document.getElementById('secDiv');
 var testBtn = document.getElementById('testBtn');
+var colorArray = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var lastBtnClicked = null;
 
-randomColor();
+
 function randomColor() {
     var buttons = document.getElementsByClassName('btnC');
     console.log(buttons);
     var randomBtn = Math.floor(Math.random() * buttons.length);
     console.log(randomBtn);
+    if (lastBtnClicked == randomBtn) { randomColor(); return }
+    console.log(randomBtn);
     var selectedBtn = buttons[randomBtn];
-    var selectedBtnClassList = selectedBtn.classList;
-    selectedBtnClassList.add('cake');
-    console.log(selectedBtn);
-    //btnRed.style.backgroundColor = 'red';
-    //btnOrange.style.backgroundColor = 'orange';
-    //btnYellow.style.backgroundColor = 'yellow';
-    //btnGreen.style.backgroundColor = 'green';
-    //btnBlue.style.backgroundColor = 'blue';
-    //btnIndigo.style.backgroundColor = 'indigo';
-    //btnViolet.style.backgroundColor = 'violet';
+    selectedBtn.style.backgroundColor = colorArray[randomBtn];
+    lastBtnClicked = randomBtn;
+    console.log(randomBtn);
+  
+}
+
+function randomColorTimer() {
+    setTimeout(randomColor, 1000)
 }
 
 function turnOff(selected) {
-    var selectedBtnClassList = selected.classList;  
-    if (selectedBtnClassList.contains('cake')) {
-        selectedBtnClassList.remove('cake');
+    if (selected.style != '') {
+        selected.style = '';
         randomColor();
     }
 }
 
 function startGame(clicky) {
-    var buttonsTwo = document.getElementsByClassName('btnC');
     if (clicky == clicky) {
         btnRed.style.backgroundColor = 'lightgrey';
         btnOrange.style.backgroundColor = 'lightgrey';
@@ -45,9 +45,12 @@ function startGame(clicky) {
         btnBlue.style.backgroundColor = 'lightgrey';
         btnIndigo.style.backgroundColor = 'lightgrey';
         btnViolet.style.backgroundColor = 'lightgrey';
-        buttonsTwo.classList.remove('cake');   
+        var buttonsTwo = document.getElementsByClassName('btnC');
+        for (var i = 0; i < buttonsTwo.length; i++) {
+            buttonsTwo.style = '';
+        }
     }
-    randomColor();
+    randomColorTimer();
     secDiv.innerText = '';
     seconds = 0;
 }
