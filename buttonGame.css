@@ -7,7 +7,9 @@
     font-size: 25px;
     background-color: lightgrey;
 }
-
+h3{
+    text-align: center;
+}
 button:hover{
     border: 2px solid black;
 }
