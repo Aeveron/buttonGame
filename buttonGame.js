@@ -13,7 +13,19 @@ disableButtons();
 
 
 function randomColor() {
-    var buttons = document.getElementsByClassName('btnC');
+    var wantedButtonCount;
+    if (time < 1000) wantedButtonCount = 3;
+    else if (time < 1300) wantedButtonCount = 2;
+    else wantedButtonCount = 1;
+
+    while (countColoredButtons() < wantedButtonCount) {
+        randomColorOne();
+    }
+}
+
+function randomColorOne() {
+    var buttons = getButtons();
+    checkWinning(buttons);
     console.log(buttons);
     var randomBtn = Math.floor(Math.random() * buttons.length);
     console.log(randomBtn);
@@ -24,8 +36,12 @@ function randomColor() {
     selectedBtn.style.backgroundColor = colorArray[randomBtn];
     lastBtnClicked = randomBtn;
     console.log(randomBtn);
-
 }
+
+function getButtons() {
+    return document.getElementsByClassName('btnC');
+}
+
 var time = 1500;
 function randomColorTimer() {
     setTimeout(randomColor, time)
@@ -38,7 +54,37 @@ function turnOff(selected) {
         time -= 60;
         console.log(time);
         randomColorTimer();        
-    }  
+    }
+}
+
+function colorButtons(count) {
+    var buttons = getButtons();
+    var countButtonsNow = countColoredButtons();
+    console.log('wants ' + count + ' buttons - has ' + countButtonsNow);
+    for (var i = countButtonsNow; i < count; i++) {
+        randomColorTimer();
+    }
+}
+
+function countColoredButtons() {
+    var buttons = getButtons();
+    var count = 0;
+    for (var i = 0; i < buttons.length; i++) {
+        if (!buttons[i].disabled) {
+            count++;
+        }
+    }
+    return count;
+}
+
+function checkWinning(buttons) {
+    for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].disabled == true) {
+            return;
+        }
+        console.log(checkWinning);
+    }
+    alert('hey');
 }
 
 

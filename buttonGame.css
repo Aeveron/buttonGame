@@ -2,13 +2,14 @@
     height: 100px;
     width: 10%;
     position: relative;
-    margin-top: 10%;
+    margin-top: 15%;
     left: 10%;
     font-size: 25px;
     background-color: lightgrey;
 }
 h3{
     text-align: center;
+    font-size: 25px;
 }
 button:hover{
     border: 2px solid black;
@@ -16,7 +17,7 @@ button:hover{
 
 #gameStart {
     position: absolute;
-    top: 35%;
+    top: 55%;
     left: 21%;
     width: 50%;
     height: 100px;
