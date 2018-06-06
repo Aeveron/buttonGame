@@ -11,7 +11,7 @@ var colorArray = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'
 var lastBtnClicked = null;
 disableButtons();
 
-
+a
 function randomColor() {
     var wantedButtonCount;
     if (time < 1000) wantedButtonCount = 3;
